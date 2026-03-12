@@ -1,0 +1,72 @@
+{
+  "livelli": {
+    "1": {
+      "nome": "Essential",
+      "descrizione": "Lente progressiva entry-level. Adatta a prescrizioni semplici con budget contenuto.",
+      "vantaggi": [
+        "Prezzo accessibile",
+        "Adattamento standard"
+      ]
+    },
+    "2": {
+      "nome": "Comfort",
+      "descrizione": "Progressiva con corridoio ottimizzato per un comfort visivo naturale.",
+      "vantaggi": [
+        "Corridoio di progressione bilanciato",
+        "Buona visione intermedia",
+        "Adattamento rapido"
+      ]
+    },
+    "3": {
+      "nome": "Advanced",
+      "descrizione": "Design avanzato con ampie aree di visione nitida a tutte le distanze.",
+      "vantaggi": [
+        "Ampio campo visivo laterale",
+        "Transizione morbida tra le zone",
+        "Ottima per uso digitale",
+        "Riduzione dell'effetto ondeggiamento"
+      ]
+    },
+    "4": {
+      "nome": "Premium",
+      "descrizione": "Tecnologia free-form personalizzata punto per punto. Per prescrizioni impegnative.",
+      "vantaggi": [
+        "Design free-form personalizzato",
+        "Massimo campo visivo",
+        "Adattamento immediato anche per portatori esigenti",
+        "Ideale per prescrizioni complesse",
+        "Riduzione aberrazioni periferiche"
+      ]
+    },
+    "5": {
+      "nome": "Elite",
+      "descrizione": "Massima personalizzazione con centratura digitale. Richiede video centratore.",
+      "vantaggi": [
+        "Centratura digitale di precisione",
+        "Calcolo individuale posizione d'uso",
+        "Performance visiva al vertice",
+        "Ideale per prescrizioni molto complesse",
+        "Garanzia di adattamento",
+        "Massima riduzione aberrazioni"
+      ]
+    }
+  },
+  "trattamenti": {
+    "antiriflesso_premium": {
+      "nome": "Antiriflesso Premium",
+      "descrizione": "Rivestimento multistrato per eliminare i riflessi fastidiosi."
+    },
+    "luce_blu": {
+      "nome": "Filtro Luce Blu",
+      "descrizione": "Protezione dagli schermi digitali, riduce l'affaticamento visivo."
+    },
+    "fotocromatico": {
+      "nome": "Fotocromatico",
+      "descrizione": "Lente che si scurisce automaticamente alla luce solare."
+    },
+    "trt_protezione": {
+      "nome": "Protezione Totale",
+      "descrizione": "Trattamento antigraffio e idrorepellente di ultima generazione."
+    }
+  }
+}
