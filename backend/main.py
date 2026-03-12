@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional
 import json
@@ -7,6 +9,8 @@ import os
 from engine import calcola
 
 app = FastAPI(title="Lens Advisor API", version="1.0.0")
+
+DIST_DIR = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")
 
 app.add_middleware(
     CORSMiddleware,
@@ -112,3 +116,15 @@ def api_lenti():
 @app.get("/api/health")
 def health():
     return {"status": "ok", "engine_version": "1.0.1"}
+
+
+# Serve frontend build
+if os.path.isdir(DIST_DIR):
+    app.mount("/assets", StaticFiles(directory=os.path.join(DIST_DIR, "assets")), name="static")
+
+    @app.get("/{full_path:path}")
+    def serve_frontend(full_path: str):
+        file_path = os.path.join(DIST_DIR, full_path)
+        if os.path.isfile(file_path):
+            return FileResponse(file_path)
+        return FileResponse(os.path.join(DIST_DIR, "index.html"))
